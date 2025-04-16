@@ -42,8 +42,10 @@
         android:layout_marginTop="20dp"
         android:textColorHint="#5C5A5A">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_marginHorizontal="20dp"
             android:hint="@string/email"
             android:background="#F1F4FF"/>
@@ -87,10 +89,12 @@
             android:background="#F1F4FF"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:paddingVertical="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/confirmPassword"
@@ -111,7 +115,7 @@
         android:textColor="#494949"/>
 
     <TextView
-        android:id="@+id/Or"
+        android:id="@+id/or"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,39 +126,47 @@
         android:textColor="#1F41BB"
         android:gravity="center"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Or">
+
 
         <ImageButton
             android:id="@+id/google"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/or"
+            app:layout_constraintEnd_toStartOf="@id/facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:contentDescription="@string/google"
             android:background="@color/white"
-            android:layout_margin="10dp"
+
+            android:layout_marginTop="20dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginHorizontal="5dp"
             android:src="@drawable/google" />
 
         <ImageButton
             android:id="@+id/facebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/google"
+            app:layout_constraintTop_toTopOf="@id/google"
+            app:layout_constraintEnd_toStartOf="@id/apple"
             android:contentDescription="@string/google"
+            android:layout_marginHorizontal="5dp"
             android:background="@color/white"
-            android:layout_margin="10dp"
             android:src="@drawable/facebook" />
 
         <ImageButton
             android:id="@+id/apple"
             android:background="@color/white"
             android:layout_width="wrap_content"
-            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/facebook"
+            app:layout_constraintTop_toTopOf="@id/google"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
             android:contentDescription="@string/google"
             android:src="@drawable/apple"/>
-    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
