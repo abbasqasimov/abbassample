@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.abbassample.databinding.ActivityMainBinding
+import com.example.abbassample.databinding.FragmentLoginBinding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+
+
         binding?.google?.setOnClickListener {
             val googleUrl="https://www.google.com"
             val newIntent= Intent(Intent.ACTION_VIEW, Uri.parse(googleUrl))
@@ -37,17 +40,15 @@ class MainActivity : AppCompatActivity() {
 
         binding?.facebook?.setOnClickListener {
             val facebookUrl="https://www.facebook.com/"
-            val newIntent2=Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl))
-            startActivity(newIntent2)
+            val newIntent=Intent(Intent.ACTION_VIEW, Uri.parse(facebookUrl))
+            startActivity(newIntent)
         }
 
         binding?.apple?.setOnClickListener {
             val appleUrl="https://www.apple.com/"
-            val newIntent3=Intent(Intent.ACTION_VIEW, Uri.parse(appleUrl))
-            startActivity(newIntent3)
+            val newIntent=Intent(Intent.ACTION_VIEW, Uri.parse(appleUrl))
+            startActivity(newIntent)
         }
-
-
     }
 
     override fun onDestroy() {
