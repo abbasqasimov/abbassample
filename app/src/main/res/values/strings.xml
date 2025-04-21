@@ -13,4 +13,16 @@
     <string name="ilgar_muellim">Ilgar muellim</string>
     <string name="penah">Penah</string>
     <string name="huseyn">Huseyn</string>
+    <string name="add">add</string>
+    <string name="cixma">cixma</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="input1">input1</string>
+    <string name="input2">input2</string>
+    <string name="_22">22</string>
+    <string name="back">Back</string>
+    <string name="google1">Google</string>
+    <string name="facebook1">Facebook</string>
+    <string name="apple">Apple</string>
+    <string name="account_created">Account Created</string>
 </resources>

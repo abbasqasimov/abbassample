@@ -13,6 +13,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.abbassample.databinding.AccountCreatedBinding
 import com.example.abbassample.databinding.ActivityMainBinding
 import com.example.abbassample.databinding.FragmentLoginBinding
 import com.google.android.material.button.MaterialButton
@@ -48,6 +49,12 @@ class MainActivity : AppCompatActivity() {
             val appleUrl="https://www.apple.com/"
             val newIntent=Intent(Intent.ACTION_VIEW, Uri.parse(appleUrl))
             startActivity(newIntent)
+        }
+        binding?.button?.setOnClickListener {
+            val sendText = binding?.emailInput?.text.toString()
+            val intent = Intent(this, AccountCreatedBinding::class.java)
+            intent.putExtra("title",sendText)
+            startActivity(intent)
         }
     }
 
