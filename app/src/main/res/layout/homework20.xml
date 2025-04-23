@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161616"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/toggleGroup"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+
+
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            app:icon="@drawable/vector"
+            app:iconGravity="textTop"
+            android:backgroundTint="#1E1E1E"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cornerRadius="0dp"/>
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="0dp"
+            android:backgroundTint="#1E1E1E"
+            android:id="@+id/competition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconGravity="textTop"
+            app:icon="@drawable/vector__1_"
+            android:text="@string/competition"
+            app:layout_constraintStart_toEndOf="@id/home"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="0dp"
+            android:backgroundTint="#1E1E1E"
+            app:icon="@drawable/vector__2_"
+            android:id="@+id/news"
+            app:iconGravity="textTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/news"
+            app:layout_constraintStart_toEndOf="@id/competition"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <com.google.android.material.button.MaterialButton
+            app:cornerRadius="0dp"
+            android:id="@+id/account"
+            android:backgroundTint="#1E1E1E"
+            app:icon="@drawable/vector__3_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconGravity="textTop"
+            android:text="@string/account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/news"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,15 +13,16 @@
         android:theme="@style/Theme.Abbassample"
         tools:targetApi="31">
         <activity
+            android:name=".Homework20Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MiniCalculator"
             android:exported="false" />
-
-
         <activity
-            android:name=".MainActivity2"
+            android:name=".Homework19Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
