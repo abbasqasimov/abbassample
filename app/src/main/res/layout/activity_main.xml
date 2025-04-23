@@ -8,123 +8,136 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/createAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="#3F51B5"
-        android:layout_marginTop="90dp"
-        android:textSize="30sp"
-        android:text="@string/create_account"/>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
-    <TextView
-        android:id="@+id/existing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/create_an_account_so_you_can_explore_all_the_existing_jobs"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/createAccount"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
-        android:layout_marginTop="12dp"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/existing"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        android:textColorHint="#5C5A5A">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailInput"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/myView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/createAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#3F51B5"
+            android:layout_marginTop="90dp"
+            android:textSize="30sp"
+            android:text="@string/create_account"/>
+
+        <TextView
+            android:id="@+id/existing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_an_account_so_you_can_explore_all_the_existing_jobs"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/createAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/existing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#5C5A5A">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/email"
+                android:background="#F1F4FF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Password"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:passwordToggleEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#5C5A5A"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/password"
+                android:background="#F1F4FF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmPassword"
+            app:passwordToggleEnabled="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Password"
+            android:layout_marginTop="20dp"
+            android:textColorHint="#5C5A5A"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:hint="@string/confirm_password"
+                android:background="#F1F4FF"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            android:layout_marginHorizontal="20dp"
-            android:hint="@string/email"
-            android:background="#F1F4FF"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Password"
-
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        android:layout_marginTop="20dp"
-        android:textColorHint="#5C5A5A"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:hint="@string/password"
-            android:background="#F1F4FF"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            app:cornerRadius="10dp"
+            android:paddingVertical="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmPassword"
+            android:layout_margin="20dp"
+            android:text="@string/sign_up"
+            android:backgroundTint="#1F41BB" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/confirmPassword"
-        app:passwordToggleEnabled="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Password"
-        android:layout_marginTop="20dp"
-        android:textColorHint="#5C5A5A"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:hint="@string/confirm_password"
-            android:background="#F1F4FF"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/already"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpButton"
+            android:layout_margin="20dp"
+            android:text="@string/already_have_an_account"
+            android:gravity="center"
+            android:textColor="#494949"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:cornerRadius="10dp"
-        android:paddingVertical="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/confirmPassword"
-        android:layout_margin="20dp"
-        android:text="@string/sign_up"
-        android:backgroundTint="#1F41BB" />
-
-    <TextView
-        android:id="@+id/already"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button"
-        android:layout_margin="20dp"
-        android:text="@string/already_have_an_account"
-        android:gravity="center"
-        android:textColor="#494949"/>
-
-    <TextView
-        android:id="@+id/or"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/already"
-        android:text="@string/or_continue_with"
-        android:layout_marginTop="40dp"
-        android:textColor="#1F41BB"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/already"
+            android:text="@string/or_continue_with"
+            android:layout_marginTop="40dp"
+            android:textColor="#1F41BB"
+            android:gravity="center"/>
 
 
 
@@ -166,6 +179,7 @@
             android:layout_marginHorizontal="5dp"
             android:contentDescription="@string/google"
             android:src="@drawable/apple"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

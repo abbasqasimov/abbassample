@@ -1,10 +1,8 @@
 package com.example.abbassample
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.abbassample.databinding.ActivityMainBinding
 
 class Homework19Activity : AppCompatActivity() {
@@ -15,12 +13,41 @@ class Homework19Activity : AppCompatActivity() {
         setContentView(binding?.root)
 
 
-        binding?.button?.setOnClickListener {
+        binding?.signUpButton?.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("abbas", binding?.emailInput?.text.toString())
+            val fragment=AccountCreatedFragment()
+            fragment.arguments=bundle
+            binding?.myView?.visibility=View.GONE
+            binding?.container?.visibility=View.VISIBLE
             supportFragmentManager.beginTransaction()
-                .replace(R.id.createAccount,AccountCreatedFragment())
-                .addToBackStack("")
+                .replace(R.id.container, fragment)
                 .commit()
         }
+
+        binding?.google?.setOnClickListener {
+            binding?.myView?.visibility=View.GONE
+            binding?.container?.visibility=View.VISIBLE
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, GoogleFragment())
+                .commit()
+
+        }
+        binding?.facebook?.setOnClickListener {
+            binding?.myView?.visibility=View.GONE
+            binding?.container?.visibility=View.VISIBLE
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container,FacebookFragment())
+                .commit()
+        }
+        binding?.apple?.setOnClickListener {
+            binding?.myView?.visibility=View.GONE
+            binding?.container?.visibility=View.VISIBLE
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container,AppleFragment())
+                .commit()
+        }
+        
 
     }
 }

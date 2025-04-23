@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             val newIntent=Intent(Intent.ACTION_VIEW, Uri.parse(appleUrl))
             startActivity(newIntent)
         }
-        binding?.button?.setOnClickListener {
+        binding?.signUpButton?.setOnClickListener {
             val sendText = binding?.emailInput?.text.toString()
             val intent = Intent(this, AccountCreatedBinding::class.java)
             intent.putExtra("title",sendText)

@@ -23,9 +23,9 @@ class Homework19Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.button?.setOnClickListener {
+        binding?.signUpButton?.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.createAccount,AccountCreatedFragment())
+                .replace(R.id.createAccount, AccountCreatedFragment())
                 .commit()
         }
     }
