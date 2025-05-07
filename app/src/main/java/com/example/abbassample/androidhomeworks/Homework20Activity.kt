@@ -1,10 +1,7 @@
-package com.example.abbassample
+package com.example.abbassample.androidhomeworks
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.abbassample.databinding.Homework20Binding
 
 class Homework20Activity : AppCompatActivity() {

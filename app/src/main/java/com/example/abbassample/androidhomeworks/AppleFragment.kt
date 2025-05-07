@@ -1,10 +1,11 @@
-package com.example.abbassample
+package com.example.abbassample.androidhomeworks
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.abbassample.R
 
 
 class AppleFragment : Fragment() {

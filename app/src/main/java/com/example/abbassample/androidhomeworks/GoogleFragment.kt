@@ -1,12 +1,13 @@
-package com.example.abbassample
+package com.example.abbassample.androidhomeworks
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.abbassample.R
 
-class FacebookFragment : Fragment() {
+class GoogleFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -14,7 +15,7 @@ class FacebookFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.facebook_view, container, false)
+        return inflater.inflate(R.layout.google_view, container, false)
     }
 
 

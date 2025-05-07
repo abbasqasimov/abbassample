@@ -1,8 +1,9 @@
-package com.example.abbassample
+package com.example.abbassample.androidhomeworks
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.abbassample.R
 import com.example.abbassample.databinding.ActivityMainBinding
 
 class Homework19Activity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class Homework19Activity : AppCompatActivity() {
 
         binding?.signUpButton?.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("abbas", binding?.emailInput?.text.toString())
+            bundle.putString("abbas", binding?.entername?.text.toString())
             val fragment=AccountCreatedFragment()
             fragment.arguments=bundle
             binding?.myView?.visibility=View.GONE
@@ -47,7 +48,7 @@ class Homework19Activity : AppCompatActivity() {
                 .replace(R.id.container,AppleFragment())
                 .commit()
         }
-        
+
 
     }
 }

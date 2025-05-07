@@ -31,4 +31,30 @@
     <string name="competition">Competition</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notes">Notes</string>
+    <string name="order_1524">Order #1524</string>
+    <string name="step_1_registration">Step 1.Registration</string>
+    <string name="e_mail">E-mail</string>
+    <string name="enter_email_adress">Enter email adress</string>
+    <string name="send_code">Send code</string>
+    <string name="step_2_email_verification">Step 2. Email verification</string>
+    <string name="verification_code">Verification code</string>
+    <string name="enter_here">Enter here</string>
+    <string name="step_3_create_new_password">Step 3. Create new password</string>
+    <string name="set_password">Set password</string>
+    <string name="set_a_password">Set a password</string>
+    <string name="minimum_8_symbol">Minimum 8 symbol</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="name">Name</string>
+    <string name="enter_name_here">Enter name here</string>
+    <string name="surname">Surname</string>
+    <string name="enter_surname_here">Enter surname here</string>
+    <string name="gender">Gender</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="subtotal_110">Subtotal: $110</string>
+    <string name="please_select_gender">Please select gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="complete">Complete</string>
+    <string name="save">Save</string>
 </resources>

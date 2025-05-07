@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".androidhomeworks.MainActivity">
 
     <FrameLayout
         android:id="@+id/container"
@@ -46,7 +46,7 @@
             android:layout_marginTop="12dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/existing"
@@ -55,7 +55,7 @@
             android:layout_marginTop="20dp"
             android:textColorHint="#5C5A5A">
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailInput"
+                android:id="@+id/entername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -71,7 +71,7 @@
             app:passwordToggleEnabled="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/name"
             android:layout_marginTop="20dp"
             android:textColorHint="#5C5A5A"
             >
