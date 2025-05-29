@@ -57,4 +57,10 @@
     <string name="female">Female</string>
     <string name="complete">Complete</string>
     <string name="save">Save</string>
+    <string name="azn">azn</string>
+    <string name="usd">usd</string>
+    <string name="convert">convert</string>
+    <string name="my_order">My Order</string>
+    <string name="alert">alert</string>
+    <string name="go_to_list">Go To List</string>
 </resources>

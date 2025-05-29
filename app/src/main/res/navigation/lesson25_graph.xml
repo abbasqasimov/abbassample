@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lesson25_graph"
+    app:startDestination="@id/lesson25Step1Fragment">
+
+    <fragment
+        android:id="@+id/lesson25Step1Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step1Fragment"
+        android:label="fragment_lesson25_step1"
+        tools:layout="@layout/fragment_lesson25_step1" >
+        <action
+            android:id="@+id/action_lesson25Step1Fragment_to_lesson25Step2Fragment"
+            app:destination="@id/lesson25Step2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson25Step2Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step2Fragment"
+        android:label="fragment_lesson25_step2"
+        tools:layout="@layout/fragment_lesson25_step2" >
+        <action
+            android:id="@+id/action_lesson25Step2Fragment_to_lesson25Step3Fragment"
+            app:destination="@id/lesson25Step3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson25Step3Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step3Fragment"
+        android:label="fragment_lesson25_step3"
+        tools:layout="@layout/fragment_lesson25_step3" >
+        <action
+            android:id="@+id/action_lesson25Step3Fragment_to_lesson25Step4Fragment"
+            app:destination="@id/lesson25Step4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson25Step4Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step4Fragment"
+        android:label="fragment_lesson25_step4"
+        tools:layout="@layout/fragment_lesson25_step4" >
+        <action
+            android:id="@+id/action_lesson25Step4Fragment_to_lesson25Step5Fragment"
+            app:destination="@id/lesson25Step5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lesson25Step6Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step6Fragment"
+        android:label="fragment_lesson25_step5"
+        tools:layout="@layout/fragment_lesson25_step5" />
+    <fragment
+        android:id="@+id/lesson25Step5Fragment"
+        android:name="com.example.abbassample.homework25.Lesson25Step5Fragment"
+        android:label="fragment_lesson25_step6"
+        tools:layout="@layout/fragment_lesson25_step6" >
+        <action
+            android:id="@+id/action_lesson25Step5Fragment_to_lesson25Step6Fragment"
+            app:destination="@id/lesson25Step6Fragment" />
+    </fragment>
+</navigation>

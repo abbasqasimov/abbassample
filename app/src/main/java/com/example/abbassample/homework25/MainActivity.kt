@@ -1,4 +1,4 @@
-package com.example.abbassample.homework22
+package com.example.abbassample.homework25
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,9 +7,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.abbassample.R
 
-class Homework22Activity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_homework22)
+        setContentView(R.layout.activity_main3)
     }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lesson27_graph"
+    app:startDestination="@id/homework27WeatherFragment">
+
+    <fragment
+        android:id="@+id/homework27WeatherFragment"
+        android:name="com.example.abbassample.homework27.Homework27WeatherFragment"
+        android:label="fragment_homework27_weather"
+        tools:layout="@layout/fragment_homework27_weather" >
+        <action
+            android:id="@+id/action_homework27WeatherFragment_to_homework27Weather2Fragment"
+            app:destination="@id/homework27Weather2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homework27Weather2Fragment"
+        android:name="com.example.abbassample.homework27.Homework27Weather2Fragment"
+        android:label="fragment_homework27_weather2"
+        tools:layout="@layout/fragment_homework27_weather2" />
+</navigation>
